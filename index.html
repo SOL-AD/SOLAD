@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Immac Printing and Publishing House</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="./images/logo.png" alt="Immac Printing Logo">
+</header>
+
+  <section class="slideshow" id="home">
+    <div class="slides active" style="background-image:url('./images/slideshow-1.png');"></div>
+    <div class="slides" style="background-image:url('./images/slideshow-2.png');"></div>
+    <div class="slides" style="background-image:url('./images/slideshow-3.png');"></div>
+  </section>
+
+  <!-- ABOUT US SECTION -->
+  <section class="about fade-section" id="about">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>ABOUT US</h2>
+        <p><strong>Immac Printing and Publishing House</strong> is a proudly Filipino-owned company dedicated to producing high-quality, inspiring, and educational printed materials. Established in Taytay, Rizal, Immac has become a trusted name in the field of book publishing, printing, and distribution, serving schools, authors, and institutions across the country.</p>
+
+        <p>Our mission is to empower minds through knowledge and creativity. We believe that every book has the power to shape lives, and our goal is to make learning accessible by providing well-designed, affordable, and relevant publications that meet the needs of students, educators, and readers nationwide.</p>
+
+        <p>With a team of passionate professionals, state-of-the-art printing facilities, and a commitment to excellence, Immac Printing and Publishing House continues to deliver products that combine quality, integrity, and innovation.</p>
+
+        <p>Beyond printing and publishing, we also collaborate with independent authors and educational organizations to bring meaningful stories and learning materials to life — one page at a time.</p>
+      </div>
+      <div class="about-image">
+        <img src="./images/about-us.webp" alt="Printing House">
+      </div>
+    </div>
+
+    <div class="values-section">
+      <h3>OUR CORE VALUES</h3>
+      <div class="values-grid">
+        <div class="value-card"><h4>INTEGRITY</h4><p>We uphold honesty and transparency in all our work.</p></div>
+        <div class="value-card"><h4>QUALITY</h4><p>We ensure excellence in every publication and print.</p></div>
+        <div class="value-card"><h4>INNOVATION</h4><p>We embrace creativity to enhance learning and reading experiences.</p></div>
+        <div class="value-card"><h4>SERVICE</h4><p>We aim to exceed client expectations through reliability and professionalism.</p></div>
+      </div>
+    </div>
+
+    <div class="mission-vision">
+      <div class="mv-card">
+        <h3>OUR VISION</h3>
+        <p>To be a leading publishing and printing house in the Philippines, recognized for promoting education, creativity, and Filipino excellence through printed and digital works.</p>
+      </div>
+      <div class="mv-card">
+        <h3>OUR MISSION</h3>
+        <p>To provide high-quality, affordable, and meaningful printed and published materials that inspire learning, support education, and celebrate Filipino talent.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="feature-section fade-section" id="services">
+    <img src="./images/services.jpg" alt="Marketing Strategy">
+     <div class="feature-text">
+        <h3>SERVICES AND OFFERINGS</h3>
+        <p>
+        At <strong>Immac Printing and Publishing House</strong>, we provide complete publishing, printing, 
+        and design solutions for schools, authors, and organizations.
+        </p>
+
+        <h4>Publishing</h4>
+        <p>
+        From editing to ISBN registration and book design — we help bring your stories and educational materials to life.
+        </p>
+
+        <h4>Printing</h4>
+        <p>
+        High-quality printing for books, brochures, school materials, certificates, and marketing collaterals.
+        </p>
+
+        <h4>Design</h4>
+        <p>
+        Creative layout and graphic design services for publications, branding, and promotional materials.
+        </p>
+
+        <h4>Academic Partnerships</h4>
+        <p>
+        We collaborate with schools and institutions to produce custom textbooks, modules, and learning resources.
+        </p>
+
+        <h4>Custom Solutions</h4>
+        <p>
+        Tailored printing and publishing services to match your goals, budget, and timeline.
+        </p>
+    </div>
+  </section>
+
+  <!-- FIND US ONLINE -->
+  <section class="findus fade-section" id="findus">
+    <h2>Find Us Online</h2>
+    <div class="social-links">
+      <a href="https://web.facebook.com/immacprintandpubhouse/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+      <a href="https://www.tiktok.com/@immacshoppe?_t=ZS-90vIahHYq6a&_r=1" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png" alt="Tiktok"></a>
+      <a href="https://shopee.ph/Mafia-Underboss-4-The-Bachelor's-Desire-(Immac-PPH)-Amorevolousencres-i.117562192.28751601784?extraParams=%7B%22display_model_id%22%3A207552980061%7D" target="_blank"><img src="./images/shopee.png" alt="Instagram"></a>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Immac Printing and Publishing House</strong><br>
+    Adhika Street, Taytay, Rizal 1920, Philippines<br>
+    📞 <a href="tel:+639483703342">0948-370-3342</a> |
+    ✉️ <a href="mailto:immacprintingservices@gmail.com">immacprintingservices@gmail.com</a></p>
+    
+    <p style="margin-top:10px;"><strong>Connect with Us:</strong><br>
+      <a href="YOUR_TIKTOK_LINK" target="_blank">TikTok</a> |
+      <a href="YOUR_FACEBOOK_LINK" target="_blank">Facebook</a> |
+      <a href="YOUR_SHOPEE_LINK" target="_blank">Shopee</a>
+    </p>
+    <br>
+    <p>&copy; 2025 Immac Printing. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slides');
+    let current = 0;
+    function showSlide(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+    }
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+    setInterval(nextSlide, 4000);
+
+    const fadeSections = document.querySelectorAll('.fade-section');
+    function handleScroll() {
+      fadeSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', handleScroll);
+  </script>
+</body>
+</html>
