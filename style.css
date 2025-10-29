@@ -373,7 +373,7 @@ footer a {
 
 /* Tablet screens */
 @media (max-width: 768px) {
-  header { flex-direction: column; height: auto; padding: 10px 20px; }
+  header { flex-direction: column; padding: 10px 20px; }
   header img { max-width: 60px; margin-bottom: 5px; }
   .slideshow { height: 300px; }
   .about { padding: 60px 5%; }
@@ -412,3 +412,4 @@ footer a {
   .social-links a img { width: 40px; height: 40px; }
   footer { font-size: 0.8rem; }
 }
+
