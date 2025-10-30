@@ -341,6 +341,35 @@ footer a {
   transform: translateY(0);
 }
 
+/* Animation keyframes */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to both value-card and mv-card */
+.values-grid,
+.mission-vision {
+  opacity: 0; /* hidden before animation */
+  animation: zoomIn 0.8s ease-out forwards;
+}
+
+/* Optional: Add a slight delay for a staggered effect */
+.values-grid:nth-child(1) { animation-delay: 0.1s; }
+.values-grid:nth-child(2) { animation-delay: 0.2s; }
+.values-grid:nth-child(3) { animation-delay: 0.3s; }
+.values-grid:nth-child(4) { animation-delay: 0.4s; }
+
+.mission-vision:nth-child(1) { animation-delay: 0.5s; }
+.mission-vision:nth-child(2) { animation-delay: 0.7s; }
+
+
 /* RESPONSIVE (unchanged from your version) */
 @media (max-width: 900px) {
   .feature-section {
@@ -373,7 +402,7 @@ footer a {
 
 /* Tablet screens */
 @media (max-width: 768px) {
-  header { flex-direction: column; padding: 10px 20px; }
+  header { flex-direction: column; height: auto; padding: 10px 20px; }
   header img { max-width: 60px; margin-bottom: 5px; }
   .slideshow { height: 300px; }
   .about { padding: 60px 5%; }
@@ -412,4 +441,3 @@ footer a {
   .social-links a img { width: 40px; height: 40px; }
   footer { font-size: 0.8rem; }
 }
-
