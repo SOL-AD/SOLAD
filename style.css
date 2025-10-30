@@ -323,6 +323,10 @@ footer a {
   text-align: justify;
 }
 
+.core-values {
+  padding: 15px 10px 15px 10px;
+}
+
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -354,20 +358,34 @@ footer a {
 }
 
 /* Apply animation to both value-card and mv-card */
+/* Default state: hidden until visible */
+.about-container,
 .values-grid,
 .mission-vision {
-  opacity: 0; /* hidden before animation */
-  animation: zoomIn 0.8s ease-out forwards;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease-out;
 }
 
-/* Optional: Add a slight delay for a staggered effect */
-.values-grid:nth-child(1) { animation-delay: 0.1s; }
-.values-grid:nth-child(2) { animation-delay: 0.2s; }
-.values-grid:nth-child(3) { animation-delay: 0.3s; }
-.values-grid:nth-child(4) { animation-delay: 0.4s; }
+/* When visible: zoom in */
+.about-container.visible,
+.values-grid.visible,
+.mission-vision.visible {
+  opacity: 1;
+  transform: scale(1);
+}
 
-.mission-vision:nth-child(1) { animation-delay: 0.5s; }
-.mission-vision:nth-child(2) { animation-delay: 0.7s; }
+
+/* Optional: Add a slight delay for a staggered effect */
+.about-container:nth-child(1) { animation-delay: 0.4s; }
+
+.values-grid:nth-child(1) { animation-delay: 0.4s; }
+.values-grid:nth-child(2) { animation-delay: 0.6s; }
+.values-grid:nth-child(3) { animation-delay: 0.8s; }
+.values-grid:nth-child(4) { animation-delay: 1s; }
+
+.mission-vision:nth-child(1) { animation-delay: 1.2s; }
+.mission-vision:nth-child(2) { animation-delay: 1.4s; }
 
 
 /* RESPONSIVE (unchanged from your version) */
